@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>1 线性表</title>
+		<basefont face="微软雅黑" size="2" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="exporter-version" content="YXBJ Windows/601392 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;" />
+		<style>
+			body,
+			td {
+				font-family: 微软雅黑;
+				font-size: 10pt;
+			}
+		</style>
+	</head>
+	<body>
+		<a name="413" />
+		<h1>1 线性表</h1>
+
+		<div>
+			<span>
+				<div><span style="font-size: 18pt; font-family: &quot;Mongolian Baiti&quot;;">顺序表</span></div>
+				<div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;">
+					<div><span style="font-size: 16pt;">typedef struct</span></div>
+					<div><span style="font-size: 16pt;">{</span></div>
+					<div><span style="font-size: 16pt;">    ElemyTpe elem[MAXSIZE];</span></div>
+					<div><span style="font-size: 16pt;">    int length;</span></div>
+					<div><span style="font-size: 16pt;">}SeqList;</span></div>
+				</div>
+				<div><span style="font-size: 18pt;">单链表</span></div>
+				<div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;">
+					<div><span style="font-size: 16pt;">typedef struct node</span></div>
+					<div><span style="font-size: 16pt;">{</span></div>
+					<div><span style="font-size: 16pt;">    DataType data;            //数据域</span></div>
+					<div><span style="font-size: 16pt;">    struct node *</span><span style="font-size: 16pt;">next;        //指针域</span></div>
+					<div><span style="font-size: 16pt;">}LNode,*LinkList;</span></div>
+				</div>
+				<div><span style="font-size: 16pt;">双向链表</span></div>
+				<div style="box-sizing: border-box; padding: 8px; font-family: Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace; font-size: 12px; color: rgb(51, 51, 51); border-radius: 4px; background-color: rgb(251, 250, 248); border: 1px solid rgba(0, 0, 0, 0.15);-en-codeblock:true;">
+					<div><span style="font-size: 16pt; font-family: Consolas;">typedef struct dlnode</span></div>
+					<div><span style="font-size: 16pt; font-family: Consolas;">{</span></div>
+					<div><span style="font-size: 16pt; font-family: Consolas;">    DataType data;</span></div>
+					<div><span style="font-size: 16pt; font-family: Consolas;">    struct dlnode *prior,*next;</span></div>
+					<div><span style="font-size: 16pt; font-family: Consolas;">}DLNode,*DLinkList;</span></div>
+				</div>
+				<div><br /></div>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+		<title>11.差错控制编码</title>
+		<link rel="stylesheet" href="../../css/mubu.css">
+	</head>
+	<body>
+		<div class="title">11.差错控制编码</div>
+		<ul class="node-list">
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">概述</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>编码目的：纠检传输差错，降低误码率，提高通信质量。</span></div>
+
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>设计思想：在发送的信码中增加一些多余码元（监督码元</span></div>
+
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>不同的编码方法，有不同的检错或纠错能力</span></div>
+
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>差错控制方式</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>信道分类</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>随机信道：错码是随机独立出现的</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>突发信道：错码是成串集中出现的</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>混合信道：既有随机错码又有突发错码</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>控制方式</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>检错重发(ARQ)</span></div>
+
+
+
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>前向纠错(FEC)</span></div>
+
+
+
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>反馈校验</span></div>
+
+
+
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>检错删除</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">纠错编码基本原理</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>分组码的基本原理</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义：将信息码分组，为每组信码附加若干监督码（即差错控制码）的编码方式</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>结构：分组码一般用符号（n，k）表示，其中n是码组的总位数，又称码组的长度（码长），k是码组中信息码元的数目，n－k＝r为码组中的监督码元数目</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>分组码参量</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>码重：分组码中“1”的个数目</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>码距：两个码组中对应位上数字不同的位数，又称汉明距离</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>最小码距：编码中各个码组之间距离的最小值</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>纠错编码的基本原理</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>最小码距d0的大小直接关系编码的检错和纠错能力</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>为检测e个错码，要求最小码距d0≧e+1</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>为纠正t个错码，要求最小码距d0≧2t+1</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>为纠正t个错码，同时检测e个错码，要求最小码距d0≧e+t+1，e&gt;t</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">纠错编码性能</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>误码率改善：采用纠错编码，误码率得到很大改善，改善的程度和所用的编码有关</span></div>
+
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>信噪比改善</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/25dbe946-9c6a-4df0-84c3-3c98f275aa05-4705748.jpg" style="width: 397px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>带宽增大：监督码元加入，发送序列增长，冗余度增大，若保持信息码元速率不变，则传输速率增大，系统带宽增大</span></div>
+
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">简单的实用编码</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>奇偶监督码</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>编码规则</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>奇数监督</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/790b4bf6-3865-4dd3-b33d-88a9d81bf546-4705748.jpg"
+															 style="width: 239px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>偶数监督</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/3c440453-f842-4812-89a5-dc8e26a92c1e-4705748.jpg"
+															 style="width: 242px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>纠检能力：只能检测奇数个错码，不具有纠错能力</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>适用：检测随机出现的零星差错</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>码率：Rc=k/n=(n-1)/n,很高（因为只有一位监督位）</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>二维监督监督码</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>编码规则：按行和列分别实施奇偶监督</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>纠检能力：较强，并且有一定的纠错能力。但是无法检测构成矩形四角的错码</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>适用：适于检测长度不大于行数（或列数）的突发错误</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>恒比码</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>编码规则：每个码组均含有相同数目的“1”（和“0”）的编码方式</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>检测方法：计算接收码组中“1”的数目，就可知是否有错</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>适用：用于电报传输系统或其他键盘设备产生的字母和符号</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>正反码</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>概念：监督位数目与信息位数目相同，且监督码元与信息码元相同或相反由信息码中“1”的个数而定的编码方式</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>编码规则</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>当信息位中有奇数个“1”时，监督位是信息位的简单重复；</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>当信息位有偶数个“1”时，监督位是信息位的反码。</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">(n,k)线性分组码</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>概念：线性分组码是指信息位和监督位满足一组线性代数方程式的分组码。其中分组码（n，k）满足条件</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/c5827279-7efe-45f7-9d19-608a56e18be2-4705748.jpg" style="width: 328px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>线性分组码原理</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>监督矩阵H</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>表示形式</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/e4328dae-cceb-4b3c-8b09-e7dbc9597e6a-4705748.jpg"
+															 style="width: 409px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>典型式</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/1df09d94-9eee-40c6-8036-01dca7f3ff2f-4705748.jpg"
+															 style="width: 108px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>生成矩阵G</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>表示形式</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/df1c1b93-be8c-417d-b9a7-4a3bac7e6e8e-4705748.jpg"
+															 style="width: 110px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>典型式</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/f2350157-f8af-4d6c-ae2f-0b68491ccbac-4705748.jpg"
+															 style="width: 115px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>线性分组码检验</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>检测计算</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/7e7f30e7-fbf9-425c-9137-99f0558b34ca-4705748.jpg" style="width: 123px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>检验规则</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>若 为0，代表该位无错码；</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>若 为1，代表该位有错码。</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>线性分组码的性质</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>封闭性：线性分组码的任意两个码组之和仍为这种码中的一个码组</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>最小码距：码组的最小重量（全“0”码组除外）</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">循环码</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>原理</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义：除了具有线性码的一般性质外，还具有循环性的码，即任一码组循环一位以后，仍为该码中的一个码组的编码方式</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>特点</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>编码和解码设备简单</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>检（纠）错的能力较强</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>运算</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>循环码代数表示</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>码多项式的按模运算 </span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/fd88b04c-e61a-4236-96e2-a99f8991a651-4705748.jpg"
+															 style="width: 379px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>循环码的生成矩阵：生成矩阵可写为</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/f3db3702-e95d-44e4-be20-3736ea681bda-4705748.jpg"
+															 style="width: 195px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>循环码的生成多项式 ：(n,k)循环码的生成多项式g(x)必须是一个常数项不为“0”的（n－k）次多项式且是(x^n+1)的一个因子</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>编码</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>用x^(n-k)乘信息码元多项式m(x)</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>用g(x)除(x^(v-k))*m(x)，得到商Q(x)和余式r(x)，即</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/5d6f3dbf-2ed7-4c8e-829e-af88cd9520a9-4705748.jpg" style="width: 283px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>令编出的码组为:A(x) = xn-k m(x)+r(x)</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>解码</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>检错</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>方法：在接收端将用原生成多项式g(x)除接收码组B(x)。即</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/42fe0f03-9daa-4669-b88b-f1db68b417a9-4705748.jpg"
+															 crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>规则：余项为0，接收码组无错码；余项不为0，接收码组有错码</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>纠错</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>用生成多项式g(x)除接收码组B(x)，得出余式r(x)</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>按余式r(x)，用查表的方法或通过某种计算得到错误图样E(x)</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>从B(x)中减去E(x)，得到已经纠正错码的原发送码组A(x)</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div id="footer">CopyRight@李德臻</div>	
+	</body>
+</html>

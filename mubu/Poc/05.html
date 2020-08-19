@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+		<title>5.模拟调制系统</title>
+		<link rel="stylesheet" href="../../css/mubu.css">
+	</head>
+	<body>
+		<div class="title">5.模拟调制系统</div>
+		<ul class="node-list">
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">幅度调制（线性调制）原理</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>调幅（AM）</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>模型</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/80ab9185-d146-430b-a6d7-3879a12d27c7-4705748.jpg" style="width: 239px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>时域表达式</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/22292828-f875-4272-ba91-9d33ec8583b5-4705748.jpg" style="width: 479px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频域表达式</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/7045f90d-451f-4939-82a7-0fd5c36cf894-4705748.jpg" style="width: 526px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>双边带调制（DSB）</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>框图</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/e814d869-18e8-4b77-b06e-27c6be1437e1-4705748.jpg" style="width: 247px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>时域表达式（去掉AM直流分量）</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/0adb4e23-3401-49b1-9004-69362caeebe0-4705748.jpg" style="width: 194px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频域表达式</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/30affb52-64cf-491f-92b6-c157328a2a06-4705748.jpg" style="width: 334px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>单边带调制（SSB）</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>滤波法</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>原理：先产生一个双边带信号，然后让其通过一个边带滤波器，滤除不要的边带，即可得到单边带信号</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>框图</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/a1220ee5-d571-4e58-9877-224f062e41ee-4705748.jpg"
+															 style="width: 291px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>相移法</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>框图</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/2e2356e8-4811-4f3c-9da4-e3bc63b3ad19-4705748.jpg"
+															 style="width: 381px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>时域表达式</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/0ed045a0-1a9f-4faf-9faa-0d06e30739b3-4705748.jpg"
+															 style="width: 388px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>残留边带调制（VSB）</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>特点：既克服了DSB信号占用频带宽的缺点，又解决了SSB信号实现中的困难</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频谱：</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/8b69f41f-4cca-4e91-ae1b-d4213a1af156-4705748.jpg" style="width: 484px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>调制</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/5ffdf2f6-2f3e-45cb-9806-84a58e09b952-4705748.jpg" style="width: 334px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>解调</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/7b1d4ad9-0362-485a-8b87-30455dab5702-4705748.jpg" style="width: 314px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>残留边带滤波器</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/48bf111f-c42d-4a69-8387-30e3c445da95-4705748.jpg" style="width: 355px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>相干解调与包络检波</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>相干解调</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>适用：AM、DSB、SSB、VSB</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>模型</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/3b41ac96-479d-4f65-9290-4dc06fada02b-4705748.jpg"
+															 style="width: 316px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>特点：无门限效应，收端产生与信号载波同频同相的相干载波</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>包络检波</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>适用：AM </span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>包络检波器</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/4ebf3be1-179b-4dbb-9971-0edddcbc774b-4705748.jpg"
+															 style="width: 318px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>优点：简单、无需载波同步</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>缺点：存在门限效应，要求调幅指数小于等于1，已调信号的包络和调制信号成正比</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">幅度调制抗噪声性能</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>模型与指标</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>分析模型</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/e5787354-f9ed-41ef-8da4-6a295f37297c-4705748.jpg" style="width: 347px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>性能指标</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>输出信噪比</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/d279bada-6424-45d1-9381-2c360edc03a9-4705748.jpg"
+															 style="width: 164px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>制度增益</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/ba930810-0dac-4de1-84bb-ecb4767e4749-4705748.jpg"
+															 style="width: 154px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>DSB-相干解调</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>模型</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/7d697910-252a-4e0f-8732-8e0eaa6a88c7-4705748.jpg" style="width: 309px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>信号与噪声功率</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/08c71c48-574b-47d0-bd29-ac2ad01b9fb9-4705748.jpg" style="width: 236px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>输出信噪比</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/10775584-11fb-445e-ac4c-b2ba8e7f2076-4705748.jpg" style="width: 111px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>制度增益</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/a500ac4e-13a9-4142-8192-bf836593e470-4705748.jpg" style="width: 181px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>SSB-相干解调</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>信号与噪声功率</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/33ba8af2-d2a6-4ebf-8e31-825488f36eab-4705748.jpg" style="width: 244px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>输出信噪比</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/674c9897-6c9e-4c31-980e-f74e45fefc0b-4705748.jpg" style="width: 119px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>制度增益</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/c81f2167-d404-421a-9c6a-72cba8717325-4705748.jpg" style="width: 152px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>AM-包络检波</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>模型</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/c3dc2fea-498c-4c87-8bff-c26c0b9d9103-4705748.jpg" style="width: 422px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>大信噪比时</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/dc897c77-50d0-4f43-be44-d43e0ceaa456-4705748.jpg" style="width: 188px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>小信噪比时：信号被扰乱为噪声，导致输出信噪比急剧恶化（门限效应）。</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">角度调制（非线性调制）原理</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>基本概念</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>相位调制（PM）</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>定义：相位调制是指瞬时相位偏移随调制信号m(t)作线性变化的过程</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>时域表达式</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/1cf4b948-2a1a-44ad-8b79-fd4c067907c8-4705748.jpg"
+															 style="width: 254px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频率调制（FM）</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span> 定义：频率调制是指瞬时频率偏移随调制信号m(t)成比例变化的过程</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>时域表达式</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/62fb860e-aeed-4156-87dd-195812cef600-4705748.jpg"
+															 style="width: 280px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">调频系统的抗噪声性能</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>模型</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/d3ba2fb1-d063-47b0-9601-bcb01f4f5200-4705748.jpg" style="width: 409px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>小信噪比时存在门限效应</span></div>
+
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>大信噪比时</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/25351adf-e4ee-4784-b57e-a44986f49005-4705748.jpg" style="width: 337px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">各种模拟系统性能比较</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>系统比较</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/99c34b3a-9f04-4bb1-a35e-4ff25df6ca4d-4705748.jpg" style="width: 441px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>性能比较</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>抗噪声性能：FM&gt;DSB/SSB&gt;VSB&gt;AM</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频谱利用率：SSB&gt;VSB&gt;DSB/AM&gt;FM</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>功率利用率：FM&gt;DSB/SSB&gt;VSB&gt;AM</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>设备复杂度：AM最简，DSB/FM次之，VSB较复杂，SSB最复杂</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>应用</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>AM：主要用在中波和短波调幅广播。</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>DSB：主要用于调频立体声中的差信号调制，彩色TV中的色差信号调制。</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>SSB：常用于频分多路复用系统中。</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>VSB：在电视广播等系统中得到了广泛应用。</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>FM：广泛应用于长距离高质量的通信系统中。</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div id="footer">CopyRight@李德臻</div>
+	</body>
+</html>

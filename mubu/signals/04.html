@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+		<title>傅里叶变换和系统的频域分析</title>
+		<link rel="stylesheet" href="../../css/mubu.css">
+	</head>
+	<body>
+		<div class="title">傅里叶变换和系统的频域分析</div>
+		<ul class="node-list">
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>信号的正交分解</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>正交</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/8bbd0a9f-3887-45e1-86e3-70ec4fa75d95-4705748.jpg" style="width: 359px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>正交函数集</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/605b33b8-701a-491b-a6b3-8ac4eede1a72-4705748.jpg" style="width: 336px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>正交函数集</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/1925cc35-8db4-460d-bf1f-172c00cb7a0d-4705748.jpg" style="width: 360px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>完备正交集</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/e70e83db-7837-4db8-88ac-3b5780d160c4-4705748.jpg" style="width: 360px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>正交分解</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/2119b4de-a29c-4099-b887-5d58ec24432d-4705748.jpg" style="width: 392px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>傅里叶级数</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>三角形式</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/28f68b23-e104-462a-9970-055827f1b755-4705748.jpg" style="width: 269px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/d6c88439-db6e-47d9-96e8-c82beda9bca5-4705748.jpg" style="width: 257px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>波形的对称性与谐波特性</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/c1f8a4cb-06a1-4eeb-8e11-80cf6434fe79-4705748.jpg" style="width: 170px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>指数形式</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/e718cb85-619d-44a6-a0d7-edabdedaba2f-4705748.jpg" style="width: 297px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/9a310a63-c187-417f-823e-7196f8539fae-4705748.jpg" style="width: 305px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>周期信号的频谱</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>频谱基本概念</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频谱</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/7d829878-57ba-4a9e-b697-e94657b1b662-4705748.jpg" style="width: 289px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>两种频谱图的关系</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/02401d29-bc01-40d9-895f-eeb953576b2c-4705748.jpg" style="width: 215px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>画图步骤</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/2236fd99-087a-44d1-950b-bf8fb64debbe-4705748.jpg" style="width: 235px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>周期矩形脉冲的频谱</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/ff36f878-59b9-4e04-8a9a-b7fb393bd6f3-4705748.jpg" style="width: 276px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>频带高度</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/750b8af3-5be8-433a-a1a9-94dc22182e1c-4705748.jpg" style="width: 257px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>周期信号的功率</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/00cbaa14-75ac-465b-b72b-22a641e2d570-4705748.jpg" style="width: 265px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>非周期信号的频谱</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>傅里叶变换</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/7e47d676-1551-4c35-b9b1-84a5946983d5-4705748.jpg" style="width: 489px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/357949b8-44c8-4bd1-8bad-93ce02bf69a5-4705748.jpg" style="width: 293px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/59fe5f8e-cbe4-46f6-83df-60bac71ea289-4705748.jpg" style="width: 481px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/d61d5cab-104a-4e6c-a201-60c360cfee1a-4705748.jpg" style="width: 450px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>常见函数的傅里叶变换</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>单边指数</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/ffbd2f2b-1fdd-4769-b1c4-8814eb41839a-4705748.jpg" style="width: 269px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/e00b320a-674e-4b59-ae5e-036c1265d111-4705748.jpg" style="width: 278px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>双边指数</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/4ee580c6-0a2e-4c94-a6a6-cb2e53f4bc83-4705748.jpg" style="width: 267px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/de6e5a95-fa7a-4a22-b1d6-5df3484a1a3a-4705748.jpg" style="width: 274px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>门函数</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/53d7de4d-0adb-4251-8198-5b547f7f3d9d-4705748.jpg" style="width: 277px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/05a7c395-0cf0-4c90-ae58-0763bdba5dba-4705748.jpg" style="width: 280px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>冲激函数</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/9c68709b-1ab6-4c35-9834-cf15561c74b1-4705748.jpg" style="width: 289px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/eb843f3a-e1a4-4578-aba6-5fe97a2c5ad0-4705748.jpg" style="width: 241px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/9f3f6233-5c2e-483e-a078-b5944a460bdc-4705748.jpg" style="width: 281px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>符号函数</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/1a014245-dee9-4b32-9dc0-c9770bc4559e-4705748.jpg" style="width: 303px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/79239a7e-301f-4a77-a76d-b77c3baff854-4705748.jpg" style="width: 317px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>阶跃函数</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/8c7103c9-ce4b-43b6-85f0-377c314cdd5f-4705748.jpg" style="width: 144px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/334eae79-d630-4631-920a-9353c5dcdb6d-4705748.jpg" style="width: 254px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>傅里叶变换的性质</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>线性</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/fa6459ad-9896-45a9-a557-dafacf7c5a34-4705748.jpg" style="width: 298px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>时移特性</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/0e733736-737c-43c3-b571-14551ab86cec-4705748.jpg" style="width: 302px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>尺度变换</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/cca60701-ce22-4805-bc3f-40200f46bbb4-4705748.jpg" style="width: 310px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>对称性质</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/34ba3861-df23-4c6e-90e1-a1413d6f6a3d-4705748.jpg" style="width: 311px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>频移特性</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/551da8b0-3898-436d-bbfd-69e7682aa51c-4705748.jpg" style="width: 319px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>卷积特性</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>时域</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/e8378ae6-e561-4828-be41-0f0e0fa72c80-4705748.jpg" style="width: 296px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频域</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/b33798a5-d1be-498b-814c-8d08de3cf4dc-4705748.jpg" style="width: 287px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading3">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>时域微分与积分</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/01aa5f38-e8c9-4b24-a986-e0df8cbfb7f9-4705748.jpg" style="width: 340px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading3">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>频域微分与积分</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/3a570a24-a3a6-4d9c-af6d-5bbda5cce15d-4705748.jpg" style="width: 357px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading3">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>帕斯瓦尔关系</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/32a8c720-02e5-4cac-be1f-a3aeca986127-4705748.jpg" style="width: 285px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>能量谱和功率谱</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>能量谱</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/22acaaa1-11ac-44b7-9f1e-4df2cc523f07-4705748.jpg" style="width: 354px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/d43a0a61-923a-46f8-97f7-bc09574275e7-4705748.jpg" style="width: 357px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/263a7b96-78ea-43c0-8157-f79c8b6cb578-4705748.jpg" style="width: 339px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>功率谱</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/ba43f283-3960-4327-a371-8cff6c1c15fe-4705748.jpg" style="width: 344px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/7382c7b2-9419-4916-b2ec-e4552bcc4165-4705748.jpg" style="width: 331px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/d2a09229-39c9-48b4-ae66-f6f2009c814f-4705748.jpg" style="width: 341px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>周期信号的傅里叶变换</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>正、余弦函数的傅里叶变换 </span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/815b7053-3ded-41f0-b49f-1bb64db47815-4705748.jpg" style="width: 293px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/1ce28809-d220-42e4-9a07-bc0b0457ed3d-4705748.jpg" style="width: 242px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/df9b2821-2266-45ee-a511-841986712353-4705748.jpg" style="width: 250px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/a8748be4-3c00-45d5-af0f-0bb61564166c-4705748.jpg" style="width: 225px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>一般周期信号的傅里叶变换</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/961e2973-7af5-4d16-a38f-9a7042b2366d-4705748.jpg" style="width: 344px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>LTI系统的频域分析</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>傅里叶分析</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/7d636f48-273b-451a-8f81-1606f53bae77-4705748.jpg" style="width: 169px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>频率响应</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>基本信号作用于LTI系统的响应 </span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/13c17615-1e5e-43e8-b9ca-3014e959836c-4705748.jpg" style="width: 365px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频率响应</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/cb650d72-edfa-4511-a518-a22ae6e7e649-4705748.jpg" style="width: 363px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>无失真传输</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/356fda2b-f98d-4c1e-9833-5ba7068a0519-4705748.jpg" style="width: 296px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>条件</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/ded8698c-39ab-4108-b444-8d601f14b38b-4705748.jpg" style="width: 296px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span> 理想低通滤波器</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/c9d677c5-9d55-4a40-9e3c-add3454399df-4705748.jpg" style="width: 351px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>冲激响应</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/7f682505-e77e-41c3-88bf-d3ee3068946e-4705748.jpg" style="width: 380px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>阶跃响应</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/3091d68f-515e-499e-b8c3-248f932ee0be-4705748.jpg" style="width: 376px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>物理可实现条件</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/7bbbfe4c-a377-42b9-8358-9c7e1552559a-4705748.jpg" style="width: 376px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/b88d1876-41ec-442a-b70a-274c47895540-4705748.jpg"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span>取样定理</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>信号的取样</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>取样信号</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/91e8fbfb-1937-48ad-8c71-046f709d1ac9-4705748.jpg"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>取样模型</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/da112fd8-a7e6-447d-93fc-6d90a9d6578d-4705748.jpg" style="width: 370px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>冲激取样</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/94a2328c-8624-4874-8806-01c4518baddf-4705748.jpg" style="width: 313px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>时域取样定理</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/2f214ede-4e6d-4b7e-b865-f7cd20161c18-4705748.jpg" style="width: 284px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading2">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>频域取样定理</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/1d91e492-e705-4686-aa29-5ef5cbb66eb4-4705748.jpg" style="width: 309px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"></div>
+			</li>
+		</ul>
+		<div id="footer">CopyRight@李德臻</div>
+	</body>
+</html>

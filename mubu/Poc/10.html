@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+		<title>10.信源编码</title>
+		<link rel="stylesheet" href="../../css/mubu.css">
+	</head>
+	<body>
+		<div class="title">10.信源编码</div>
+		<ul class="node-list">
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">引言</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading3">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>信源编码作用：压缩编码、A/D转换</span></div>
+
+
+
+						</li>
+						<li class="node heading3">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>A/D转换的技术：波形编码、参量编码</span></div>
+
+
+
+						</li>
+						<li class="node heading3">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>波形编码过程：抽样、量化、编码</span></div>
+
+
+
+						</li>
+						<li class="node heading3">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>波形编码方法：PCM、DPCM、ΔM</span></div>
+
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">模拟信号抽样</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>低通模拟信号的抽样</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>抽样定理：设一个连续模拟信号m(t)中的最高频率小于fH，则以等间隔时间为Ts≤1/2fH的周期性冲激脉冲对它抽样时，m(t)将被这些抽样值所完全确定。</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>抽样特性</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>抽样频谱</span></div>
+
+
+													<div class="children">
+														<ul class="node-list">
+															<li class="node">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>频谱表达式</span></div>
+																<ul class="image-list">
+																	<li class="image-item">
+																		<img src="https://api2.mubu.com/v3/document_image/d171ba03-d267-4f7e-ac0d-f24e80f7da3a-4705748.jpg"
+																		 style="width: 435px;" crossorigin="anonymous" class="image" />
+																	</li>
+																</ul>
+
+
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>奈奎斯特抽样速率：不发生混叠的最低抽样速率2fH，即fs≥2fH</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>奈奎斯特抽样间隔 ：不发生混叠的最大抽样时间间隔</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>原信号的恢复 ：当fs≥2fH时，利用截止频率为fH的理想低通滤波器从抽样信号中分离出原信号</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>带通模拟信号的抽样</span></div>
+
+
+
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">模拟脉冲调制</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>方式分类</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>脉冲振幅调制(PAM):用模拟信号对周期脉冲序列的幅度进行调制</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>脉冲宽度调制(PDM):将PAM信号的振幅变化按比例地变换成脉冲宽度变化</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>脉冲位置调制(PPM):将PAM信号的振幅变化变换成脉冲相位变化</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>PAM调制</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>自然采样信号</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>定义：已调信号ms(t)的脉冲顶部和原模拟信号波形相同的抽样信号</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>频谱</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/870b885e-3c4b-41ba-babf-a95dfb3429cd-4705748.jpg"
+															 style="width: 367px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>平顶采样</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>定义：原始信号经过自然抽样后通过一个保持电路，将抽样电压保持一定时间，以保持电路的输出脉冲维持平顶的PAM信号</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>抽样保持电路</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/110aa0f5-455e-4543-8dff-4d7b73a1a0dc-4705748.jpg"
+															 style="width: 252px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>频谱</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/a00d8a92-bffa-4734-a0c9-57074a2f7fcc-4705748.jpg"
+															 style="width: 254px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">抽样信号量化</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>量化原理</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>概念</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>量化的定义：用M个量化电平表示连续抽样值的方法称为量化</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>量化电平：指将抽样值的范围划分成M个区间，用来表示每个区间的M个离散电平</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>过程</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/5f37d51c-450c-40a6-9c99-47b31f0926e8-4705748.jpg" style="width: 299px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>实现</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/8ec561e2-bc0f-435b-8fcf-feed285481b4-4705748.jpg" style="width: 279px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>均匀量化</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义：M个抽样值区间是等间隔划分的量化方式</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>实现</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>量化间隔</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/0f9512e6-9935-4487-a74f-3112f64c5a6c-4705748.jpg"
+															 style="width: 111px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>量化区间端点</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/e59fbfb7-7c09-452f-9d79-0daf99b23179-4705748.jpg"
+															 style="width: 269px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>量化输出电平</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/27c892a4-6a96-48ff-8ac9-334993b01312-4705748.jpg"
+															 style="width: 252px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>均匀量化的平均量噪比</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>量化噪声功率</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/b45bcb7f-e62c-41ac-bf8d-43e98de3617a-4705748.jpg"
+															 style="width: 304px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>信号平均功率</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/498efd76-d205-4d4e-bd67-96c997e7fc58-4705748.jpg"
+															 style="width: 223px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>平均量噪比</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/d0dea970-e2d9-4ebd-a8a5-8d5b7bb71c9c-4705748.jpg"
+															 style="width: 233px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>非均匀量化</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义：M个抽样值区间随信号抽样值的不同而不均匀划分的量化方式</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>特点：信号抽样值小时，量化间隔Δν小；信号抽样值大时，量化间隔Δν大</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>实现：非均匀量化的实现方法通常是在进行量化之前，先将信号抽样值压缩，再进行均匀量化</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>抽样值压缩</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>定义：利用非线性电路将输入电压x变换成输出电压y＝f(x)的压缩方法</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>A压缩律和13折线压缩 </span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>μ压缩律和15折线压缩</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">脉冲编码调制</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>基本原理</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义：通过抽样、量化、编码将模拟信号变换成二进制信号的方法</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>框图</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>发送端</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/26e26e0e-5df6-4041-81b9-4e75d3da21e0-4705748.jpg"
+															 crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>接收端</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/495708d8-95e5-404a-a656-147b5276e112-4705748.jpg"
+															 style="width: 314px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>常用二进制码</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>常用二进制码类别及其编码规律</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>自然二进制码：按照二进制数的自然规律排列来表示量化级的码元序列 </span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>折叠二进制码：最高位表示电压的极性正负，而用其他位来表示电压的绝对值，且除了最高位符号相反外，上下两部分还呈现映像关系的码元序列</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>PCM编码</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>编码规则：</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/5de7d2bf-6dfc-4848-bcc7-05b4ccc797eb-4705748.jpg"
+															 style="width: 357px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>极性码：表示样值的极性。正编“1”，负编“0”</span></div>
+
+
+
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>段落码：表示样值的幅度所处的段落</span></div>
+
+
+
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>段内码：16种可能状态对应代表各段内的16个量化级</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">时分复用(TDM)</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>基本概念</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定义：一种通过不同时隙中的交叉位脉冲，同时在同一个通信媒体上传输多个数字化信号的技术</span></div>
+
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>原理图</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/cf5dbd16-1443-4344-9a06-813b010a310f-4705748.jpg" style="width: 238px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>优点：便于实现数字通信、易于制造、适于采用集成电路实现、生产成本较低</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>准同步数字体系</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading1">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>E体系</span></div>
+
+
+
+									</li>
+									<li class="node heading1">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>T体系</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div id="footer">CopyRight@李德臻</div>
+	</body>
+</html>

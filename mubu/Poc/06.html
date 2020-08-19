@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+		<title>6.数字基带传输系统</title>
+		<link rel="stylesheet" href="../../css/mubu.css">
+	</head>
+	<body>
+		<div class="title">6.数字基带传输系统</div>
+		<ul class="node-list">
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">数字基带信号及其频谱特性</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>数字基带信号</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>单极性不归零信号</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>用正电平和零电平分别对应二进制数字“1”和“0”</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>电脉冲之间无间隔，极性单一</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>有直流分量，要求传输线路具有直流传输能力</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>双极性不归零信号</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>用正、负电平的脉冲分别表示二进制数字“1”和“0”</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>当“1”和“0”等概率时无直流分量，有利于在信道中传输；</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>接收端恢复信号的判决电平为0，不受信道特性变化的影响，抗干扰能力较强</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>单极性归零信号</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>有电脉冲宽度τ小于码元宽度TB；</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>可直接从单极性RZ波形提取定时信息。</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>双极性归零信号</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>当“1”和“0”等概率时无直流分量，有利于在信道中传输；</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>收端判决电平为0，不受信道特性变化的影响，抗干扰能力较强</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>差分信号</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>用相邻码元的电平的跳变和不变来表示消息，而与码元本身的电位或极性无关；</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>可以消除设备初始状态的影响，可以用于解决载波相位模糊问题</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>多电平信号</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>一个脉冲对应多个二进制码；</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>可以提高频带利用率，适用于频带受限的高速数据传输系统</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>基带信号的频谱特性</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>二进制随机信号的功率谱密度包括连续谱和离散谱</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>连续谱总是存在的，实际中G1()f≠G2(f)。谱的形状取决于g1(t),g2(t)的频谱以及概率P</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>离散谱通常也存在，但对于双极性信号g1(t)=-g2(t)，且等概p=1/2时离散谱消失</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>通常，根据连续谱可以确定信号的带宽。根据离散谱可以确定随机序列是否有直流分量和位定时分量，这也是分析频谱的目的</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">基带传输的常用码型</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>传输码的码型选择原则</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>线路码功率谱密度中，无直流分量</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>线路码功率谱密度带宽有限，可以限制信号带宽，减小功率谱密度当中的高频分量，与传输信道匹配</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>线性编码中包含与定时分量相关的离散谱，便于接收端从信号中提取定时信息.</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>数字信源输出的代码有各种可能性，输出代码是随机的</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>几种常用的传输码型</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading1">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>AMI</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>编码规则：将消息码的“1”交替地变换为“＋1”和“－1”，而“0”保持不变</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>优点：无直流成分，且高、低频分量少；能量集中在频率为 码速处；编解码电路简单，可利用传号极性交替这一规律观察误码情况</span></div>
+
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>缺点：当原信码出现长连“0”串时，信号的电平长时间不跳变，提取定时信号困难</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading1">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>HDB3</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>编码规则</span></div>
+
+
+													<div class="children">
+														<ul class="node-list">
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>检查消息码的连“0”个数。当连“0”数小于等于3时，则利用AMI码编码规则</span></div>
+
+
+
+															</li>
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>连“0”数目超过3个时，将第4个“0”改为非“0”脉冲，记为“＋V”或“－V”，称为破坏脉冲</span></div>
+
+
+
+															</li>
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>相邻V码的极性必须交替出现（确保无直流）</span></div>
+
+
+
+															</li>
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>满足（c）的条件下检查V的极性是否与前面一个非“0”脉冲的极性相同，若不同，将原连0码“0000”的第一个0改为B,B的取值与后面的V一致，B称为调节脉冲</span></div>
+
+
+
+															</li>
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>V码后面的传号码极性也要交替</span></div>
+
+
+
+															</li>
+														</ul>
+													</div>
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>特点</span></div>
+
+
+													<div class="children">
+														<ul class="node-list">
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>HDB3码除具备AMI码的优点外，同时还将连“0”码限制在3个以内，保证接收端定时信息的提取</span></div>
+
+
+
+															</li>
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>HDB3码的编码比较复杂，解码比较简单</span></div>
+
+
+
+															</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">数字基带信号传输与码间串扰</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>数字基带信号传输系统的组成</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>构成</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/56f487aa-d45f-4d6a-9d2d-53c9565733f5-4705748.jpg" style="width: 530px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>分析</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>误码：由接收端抽样判决器的错误判决造成，原因主要是码间串扰和信道加性噪声的影响</span></div>
+
+
+
+												</li>
+												<li class="node heading2">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>码间串扰（ISI）：由于系统传输总特性不理想，导致前后码元的波形畸变、展宽，并使前面波形出现很长的拖尾，蔓延到当前码元的抽样时刻上，从而对当前码元的判决造成干扰</span></div>
+
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>数字基带信号传输的定量分析</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>系统模型</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/b29d9ce8-3e93-4ddd-bc90-8bb5b25d8a8d-4705748.jpg" style="width: 458px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定量分析</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>基带传输总特性</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/9fb5af8d-cea8-4827-ba7f-ceedb6c3c86e-4705748.jpg"
+															 style="width: 245px;" crossorigin="anonymous" class="image" />
+														</li>
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/bde42e6f-0732-4e6f-adad-16c5f17ee833-4705748.jpg"
+															 style="width: 323px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading1">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>{an}对应的基带信号</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/b729144f-7d5b-4f1e-ae97-e8d45f6168cf-4705748.jpg"
+															 style="width: 243px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading1">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>接收滤波器输出信号</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/399d61be-5b79-4cc4-9f3e-aaaba061c447-4705748.jpg"
+															 style="width: 466px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading1">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>确定第k个码元ak的取值，在t＝kTB＋t0时刻上对r(t)进行抽样得</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/05ba6c3e-1137-4ff2-8808-c5391a4533c7-4705748.jpg"
+															 style="width: 366px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">无码间串扰的基带传输特性</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>消除码间串扰的基本思想</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>表达式：</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/f78f48ac-c9e2-4238-a914-9af5bcf01597-4705748.jpg" style="width: 277px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>基本思想：令h(t)在TB＋t0、2TB＋t0到nTB＋t0码元抽样判决时刻上正好为0。</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>无码间串扰的条件</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>时域：若h(t)的抽样值除t＝0在其他所有抽样点上均为零，则不存在码间串扰</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/91e94366-268a-4d6d-b2bd-375d845f32f1-4705748.jpg" style="width: 356px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>频域：若H(ω)的特性等效成一个理想（矩形）低通滤波器，则不存在码间串扰</span></div>
+										<ul class="image-list">
+											<li class="image-item">
+												<img src="https://api2.mubu.com/v3/document_image/7fbf6daf-5e49-48b8-a528-f91dc2f05766-4705748.jpg" style="width: 343px;"
+												 crossorigin="anonymous" class="image" />
+											</li>
+										</ul>
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>无码间串扰传输特性的设计</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>理想低通特性</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>传输函数</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/973b6066-bb34-46b4-a392-72f0b7336fff-4705748.jpg"
+															 style="width: 204px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>传输参量</span></div>
+
+
+													<div class="children">
+														<ul class="node-list">
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>无码间串扰条件下的最高频带利用率</span></div>
+																<ul class="image-list">
+																	<li class="image-item">
+																		<img src="https://api2.mubu.com/v3/document_image/7219893f-9777-4daa-8e2e-da2cbf49a236-4705748.jpg"
+																		 crossorigin="anonymous" class="image" />
+																	</li>
+																</ul>
+
+
+															</li>
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>奈奎斯特带宽：理想低通传输特性的带宽（1/(2*TB) ），记为fN</span></div>
+
+
+
+															</li>
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>奈奎斯特速率 :系统无码间串扰的最高传输速率</span></div>
+																<ul class="image-list">
+																	<li class="image-item">
+																		<img src="https://api2.mubu.com/v3/document_image/ab2789fb-5fe8-4de0-8294-c22ac151de93-4705748.jpg"
+																		 style="width: 243px;" crossorigin="anonymous" class="image" />
+																	</li>
+																</ul>
+
+
+															</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="node heading2">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>传输滚降特性</span></div>
+
+
+										<div class="children">
+											<ul class="node-list">
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>传输函数</span></div>
+													<ul class="image-list">
+														<li class="image-item">
+															<img src="https://api2.mubu.com/v3/document_image/c62cc9e6-e7d5-48a1-973e-fb87789b003e-4705748.jpg"
+															 style="width: 383px;" crossorigin="anonymous" class="image" />
+														</li>
+													</ul>
+
+
+												</li>
+												<li class="node heading3">
+													<div class="bullet">
+														<div class="bullet-dot"></div>
+													</div>
+													<div class="content"><span>传输参量</span></div>
+
+
+													<div class="children">
+														<ul class="node-list">
+															<li class="node heading3">
+																<div class="bullet">
+																	<div class="bullet-dot"></div>
+																</div>
+																<div class="content"><span>最高频带利用率为</span></div>
+																<ul class="image-list">
+																	<li class="image-item">
+																		<img src="https://api2.mubu.com/v3/document_image/11dce172-b050-48f4-b9c1-e07d195b53e1-4705748.jpg"
+																		 style="width: 483px;" crossorigin="anonymous" class="image" />
+																	</li>
+																</ul>
+
+
+															</li>
+														</ul>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">基带传输系统的抗噪声性能</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>归纳</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/20d978e3-cf2e-4e05-a19b-f7fb03bc0a05-4705748.jpg" style="width: 264px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>比较</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>抗噪声性能：在A/σn一定时，双极性基带系统比单极性基带系统抗噪声性能好</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>误码率：当比值A/σn一定时，双极性最佳门限电平为0，与信号幅度无关，不受信道特性影响，误码率低；而极性最佳判决门限为 A/2，易受信道特性变化影响，误码率增大</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="node heading1">
+				<div class="bullet">
+					<div class="bullet-dot"></div>
+				</div>
+				<div class="content"><span class="bold">眼图</span></div>
+
+
+				<div class="children">
+					<ul class="node-list">
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>定义：眼图是指通过利用示波器观察接收端的基带信号波形，估计和调整系统性能的方法</span></div>
+
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>观察方法</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/95ccd912-41cc-4fde-bfc3-ecf5fdc89a6a-4705748.jpg" style="width: 600px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>模型</span></div>
+							<ul class="image-list">
+								<li class="image-item">
+									<img src="https://api2.mubu.com/v3/document_image/b0f1841d-e11f-4cfa-b628-bc2890f72499-4705748.jpg" style="width: 363px;"
+									 crossorigin="anonymous" class="image" />
+								</li>
+							</ul>
+
+
+						</li>
+						<li class="node heading1">
+							<div class="bullet">
+								<div class="bullet-dot"></div>
+							</div>
+							<div class="content"><span>信息</span></div>
+
+
+							<div class="children">
+								<ul class="node-list">
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>最佳抽样时刻是“眼睛”张开最大的时刻；</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>定时误差灵敏度是眼图斜边的斜率，斜率越大，对位定时误差越敏感；（3）抽样时刻上信号受噪声干扰的畸变程度是图中阴影区的垂直高度；</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>判决门限电平是图中央的横轴位置；</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>噪声容限是抽样时刻上下两阴影区的间隔距离之半；</span></div>
+
+
+
+									</li>
+									<li class="node heading3">
+										<div class="bullet">
+											<div class="bullet-dot"></div>
+										</div>
+										<div class="content"><span>过零点畸变是图中倾斜阴影带与横轴相交的区间；即接收波形零点位置的变化范围，可利用信号零交点的平均位置来提取定时信息。</span></div>
+
+
+
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div id="footer">CopyRight@李德臻</div>
+	</body>
+</html>

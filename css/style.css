@@ -1,0 +1,23 @@
+* {
+	font-family: "微软雅黑";
+}			
+a {
+	color: orange;
+	text-decoration: none;
+}
+#div01{
+	color: #00B9EB;
+}
+#footer {
+	height: 40px;
+	line-height: 40px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background: #ffffff;
+	color: #000000;
+	font-family: Arial;
+	font-size: 12px;
+	letter-spacing: 1px;
+}

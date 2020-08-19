@@ -1,0 +1,174 @@
+<html>
+	<head>
+		<title>习题7  图</title>
+		<basefont face="微软雅黑" size="2" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="exporter-version" content="YXBJ Windows/601392 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;" />
+		<style>
+			body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+	</head>
+	<body>
+		<a name="1426" />
+		<h1>习题7  图</h1>
+
+		<div>
+			<span>
+				<div>
+					<div>
+						<font style="font-size: 18pt;"><span style="font-size: 18pt; font-weight: bold;">选择</span></font>
+					</div>
+					<ul>
+						<li>
+							<div><span style="font-size: 14pt;">在一个图中，所有顶点的度数之和等于所有边数的</span><span style="font-size: 14pt; color: rgb(255, 0, 0);">2</span><span
+								 style="font-size: 14pt;">倍。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">在一个有向图中，所有顶点的入度之和等于所有顶点的出度之和的</span><span style="font-size: 14pt; color: rgb(255, 0, 0);">1</span><span
+								 style="font-size: 14pt;">倍。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">一个有n个顶点的无向图最多有</span> <span style="font-size: 14pt; color: rgb(255, 0, 0); font-family: 微软雅黑, sans-serif;">n(n-1)/2</span><span
+								 style="font-size: 14pt;">条边。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">具有4个顶点的无向完全图有</span> <span style="font-size: 14pt;"><span style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">6</span></span><span
+								 style="font-size: 14pt;">条边。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">具有6个顶点的无向图至少应有</span><span style="font-size: 14pt; color: rgb(255, 0, 0);">5</span><span
+								 style="font-size: 14pt;">条边才能确保是一个连通图。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">在一个具有n个顶点的无向图中，要连通全部顶点至少需要</span> <span style="font-size: 14pt; color: rgb(255, 0, 0); font-family: 微软雅黑, sans-serif;">n-1</span><span
+								 style="font-size: 14pt;">条边。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">对于一个具有n个顶点的无向图，若采用邻接矩阵表示，则该矩阵的大小是</span> <span style="font-size: 14pt; color: rgb(255, 0, 0); font-family: 微软雅黑, sans-serif;">n</span><span
+								 style="vertical-align: super; font-size: smaller; color: rgb(255, 0, 0); font-family: 微软雅黑, sans-serif;">2</span><span
+								 style="font-size: 14pt;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">对于一个具有n个顶点和e条边的无向图，若采用邻接矩阵表示，则表头向量的大小是</span> <span style="font-size: 14pt;"><span
+									 style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">n</span></span><span style="font-size: 14pt;">；所有邻接矩阵中的结点总数是</span>
+								<span style="font-size: 14pt;"><span style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">2e</span></span><span
+								 style="font-size: 14pt;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">已知一个图如图所示，若从顶点a出发按深度搜索法进行遍历，则可得到顶点序列为</span> <span style="font-size: 14pt;"><span
+									 style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">aedfcb</span></span><span
+								 style="font-size: 14pt;">；按宽度搜索法进行遍历，则可得到顶点序列为</span> <span style="font-size: 14pt;"><span style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">abcefd</span></span><span
+								 style="font-size: 14pt;">。</span></div>
+						</li>
+						<ul>
+							<li>
+								<div><span style="font-size: 14pt;"><img src="习题7  图_files/Image.png" type="image/png" data-filename="Image.png"
+										 width="94" /></span></div>
+							</li>
+						</ul>
+						<li>
+							<div><span style="font-size: 14pt;">已知一有向图的邻接表存储结构如图所示</span></div>
+						</li>
+						<ul>
+							<li>
+								<div><span style="font-size: 14pt;"><img src="习题7  图_files/Image [1].png" type="image/png" data-filename="Image.png"
+										 width="171" /></span></div>
+							</li>
+							<li>
+								<div><span style="font-size: 14pt;">根据有向图的深度优先遍历算法，从v1顶点出发，所得到的顶点序列是</span> <span style="font-size: 14pt;"><span
+										 style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">v1,v3,v4,v5,v2</span></span><span
+									 style="font-size: 14pt;">。</span></div>
+							</li>
+							<li>
+								<div><span style="font-size: 14pt;">根据有向图的宽度优先遍历算法，从v1顶点出发，所得到的顶点序列是</span> <span style="font-size: 14pt;"><span
+										 style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">v1,v3,v2,v4,v5</span></span><span
+									 style="font-size: 14pt;">。</span></div>
+							</li>
+						</ul>
+						<li>
+							<div><span style="font-size: 14pt;">采用邻接表存储的图的深度优先遍历算法类似于二叉树的</span> <span style="font-size: 14pt;"><span style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">先序遍历</span></span><span
+								 style="font-size: 14pt;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">采用邻接表存储的图的宽度优先遍历算法类似于二叉树的 </span><span style="text-indent: 21pt; font-size: 14pt;-en-paragraph:true;"><span
+									 style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">按层遍历</span></span><span style="font-size: 14pt;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt;">判定一个有向图是否存在回路除了可以利用拓扑排序方法外，还可以利用</span> <span style="font-size: 14pt;"><span
+									 style="font-family: 微软雅黑, sans-serif; font-size: 14pt; color: rgb(255, 0, 0);">深度优先遍历算法</span></span><span
+								 style="font-size: 14pt;">。</span></div>
+						</li>
+					</ul>
+					<div>
+						<font style="font-size: 18pt;"><span style="font-size: 18pt; font-weight: bold;">填空</span></font>
+					</div>
+					<ul>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">n</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">个顶点的连通图至少</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">n-1</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">条边。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在无权图</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">G</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">的邻接矩阵中，若</span> <span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">(vi,
+									vj)</span> <span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">或</span> <span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">&lt;vi,
+									vj&gt;</span> <span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">属于图</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">G</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">的边集，则对应元素</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">A[i][j]</span>
+								<span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">等于</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">1</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，否则等于</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">0</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在无权图</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">G</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">的邻接矩阵中，若</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">A[i][j]</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">等于</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">1</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，则等于</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">A[j][i]
+									=</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">1</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">已知图</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">G</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">的邻接表如图所示，其从</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">v1</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">顶点出发的深度优先搜索序列为</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">1</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">2</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">3</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">6</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">5</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">4</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，其从</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">v1</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">顶点出发的宽度优先搜索序列为</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">1</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">2</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">5</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">4</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">3</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">、</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">6</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<ul>
+							<li>
+								<div><span style="font-size: 14pt;"><img src="习题7  图_files/Image [2].png" type="image/png" data-filename="Image.png"
+										 width="177" /></span></div>
+							</li>
+						</ul>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">已知一图的邻接矩阵表示，计算第</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">i</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">个结点的入度的方法是</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">求矩阵第</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">i</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">列非</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">0</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">元素之和</span> <span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">已知一图的邻接矩阵表示，删除所有从第</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">i</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">个结点出发的边的方法是</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">将矩阵第</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">i</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">行全部置为</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">0</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+					</ul>
+					<div><br /></div>
+				</div>
+				<div><br /></div>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,279 @@
+<html>
+	<head>
+		<title>习题9  排序</title>
+		<basefont face="微软雅黑" size="2" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta name="exporter-version" content="YXBJ Windows/601392 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;" />
+		<style>
+			body,
+			td {
+				font-family: 微软雅黑;
+				font-size: 10pt;
+			}
+		</style>
+	</head>
+	<body>
+		<a name="1436" />
+		<h1>习题9  排序</h1>
+
+		<div>
+			<span>
+				<div>
+					<div>
+						<font style="font-size: 18pt;"><span style="font-size: 18pt; font-weight: bold;">选择</span></font>
+					</div>
+					<ul>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在所有排序方法中，关键字比较的次数与记录的初始排列次序无关的是</span> <span
+								 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+									<font style="color: rgb(255, 0, 0);">选择排序</font>
+								</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">设有</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">1000</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">个无序的元素，希望有最快的速度挑选出其中前</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">10</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">个最大的元素，最好采用</span>
+								<span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+									<font color="#FF0000">堆排序</font>
+								</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">
+									<font color="#FF0000">排序法</font>。
+								</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在待排序的元素序列基本有序的前提下，效率最高的排序方法是</span> <span
+								 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+									<font style="color: rgb(255, 0, 0);">插入排序</font>
+								</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">一组记录的排序码为（</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">46</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">79</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">56</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">38</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">40</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">84</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">），则利用堆排序方法建立的初始堆为</span>
+								<font style="color: rgb(255, 0, 0);"><span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">84</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">79</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">56</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">38</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">40</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">46</span></font><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span>
+							</div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">一组记录的排序码为（</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">46</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">79</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">56</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">38</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">40</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">84</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">），则利用快速排序方法，以第一个记录为基准得到的一次划分结果为</span>
+								<font style="color: rgb(255, 0, 0);"><span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">40</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">38</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">46</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">56</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">79</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">，</span><span
+									 style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">84</span></font><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span>
+							</div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">一组记录的排序码为（</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">25</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">48</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">16</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">35</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">79</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">82</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">23</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">40</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">36</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">72</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">），其中含有</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">5</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">个长度为</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">2</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">的有序表，按归并排序的方法对该序列进行一趟归并后的结果为</span> <span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+									<font style="color: rgb(255, 0, 0);">16 25 35 48 23 40 79 82 36 72</font>
+								</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">排序方法中，从未排序序列中依次取出元素与已排序序列（初始时为空）中的元素进行比较，将其放入已排序序列的正确位置上的方法，称为</span>
+								<span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+									<font style="color: rgb(255, 0, 0);">插入排序</font>
+								</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">排序方法中，从未排序序列中挑选元素，并将其依次放入已排序序列（初始时为空）的一端的方法，称为</span>
+								<span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+									<font style="color: rgb(255, 0, 0);">选择排序</font>
+								</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">用某种排序方法对线性表（</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">25</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">84</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">21</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">47</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">15</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">27</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">68</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">35</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">20</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">）进行排序时，元素序列的变化情况如下：</span></div>
+						</li>
+						<ul>
+							<li>
+								<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">（</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">1</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">）</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">25</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">84</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">21</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">47</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">15</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">27</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">68</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">35</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">20</span></div>
+							</li>
+							<li>
+								<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">（</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">2</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">）</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">20</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">15</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">21</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">25</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">47</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">27</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">68</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">35</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">84</span></div>
+							</li>
+							<li>
+								<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">（3</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">）</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">15</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">20</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">21</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">25</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">35</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">27</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">47</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">68</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">84</span></div>
+							</li>
+							<li>
+								<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">（</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">4</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">）</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">15</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">20</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">21</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">25</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">27</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">35</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">47</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">68</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;-en-paragraph:true;">84</span></div>
+							</li>
+							<li>
+								<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">则采用的排序方法是</span> <span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">快速排序</span><span
+									 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+							</li>
+						</ul>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">下列几种排序方法中，平均查找长度最小的是</span> <span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+									<font style="color: rgb(255, 0, 0);">快速排序</font>
+								</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">下列几种排序方法中，要求内存量最大的是</span><span style="text-indent: 21pt; font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif;-en-paragraph:true;">
+									<font style="color: rgb(255, 0, 0);">归并排序</font>
+								</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">快速排序方法在</span> <span style="font-size: 14.0pt; font-family: &quot;微软雅黑&quot;,sans-serif; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">
+									<font style="color: rgb(255, 0, 0);">要排序的数据已基本有序</font>
+								</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">情况下最不利于发挥其长处。</span></div>
+						</li>
+					</ul>
+					<div>
+						<font style="font-size: 18pt;"><span style="font-size: 18pt; font-weight: bold;">填空</span></font>
+					</div>
+					<ul>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在对一组记录（</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">54</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">38</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">96</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">23</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">15</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">72</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">60</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">45</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">83</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">）进行直接插入排序时，当把第七个记录</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">60</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">插入到有序表时，为寻找插入位置需比较</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">3</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">次。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在利用快速排序方法对（</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">54</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">38</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">96</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">23</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">15</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">72</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">60</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">45</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">83</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">）进行快速排序时，递归调用而使用的栈的所能达到的最大深度为</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">2</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，共需递归调用的次数为</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">4</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，其中第二次递归调用是对</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">（</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">23</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">，</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">38</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">，</span><span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">15</span><span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">）</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">一组记录进行快速排序。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在堆排序、快速排序和归并排序中，若只从存储空间考虑，则应首先选取</span> <span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">堆排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">方法，其次选取</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">快速排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">方法，最后选取</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">归并排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">方法；若只从排序结果的稳定性考虑，则应选取</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">归并排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">方法；若只从平均情况下排序最快考虑，则应选取</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">快速排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">方法；若从最坏情况下排序最快并且要节省内存考虑，则应选取</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">堆排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">方法。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在插入排序、希尔排序、选择排序、快速排序、堆排序、归并排序和基数排序中，排序是不稳定的有</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">希尔排序、选择排序、快速排序和堆排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在插入排序、希尔排序、选择排序、快速排序、堆排序、归并排序和基数排序中，平均比较次数最少的排序是</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">快速排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，需要内存量最多的是</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">基数排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在堆排序和快速排序中，若原始记录接近正序或反序，则选用</span> <span
+								 style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">堆排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">，若原始记录无序，则选用</span>
+								<span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">快速排序</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">在插入排序和选择排序中，若初始数据基本正序，则选用</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">插入排序，</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">若初始数据基本反序，则选用</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">选择排序</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+						<li>
+							<div><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">对</span><span style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">n</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">个元素的序列进行起泡排序时，最少的比较次数是</span> <span style="font-size: 14pt; color: red; font-family: 微软雅黑, sans-serif;">n-1</span><span
+								 style="font-size: 14pt; font-family: 微软雅黑, sans-serif;">。</span></div>
+						</li>
+					</ul>
+					<div><br /></div>
+				</div>
+				<div><br /></div>
+			</span>
+		</div>
+	</body>
+</html>
