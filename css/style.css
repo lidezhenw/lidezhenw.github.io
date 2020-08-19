@@ -7,6 +7,13 @@ a {
 }
 #div01{
 	color: #00B9EB;
+	text-align: center;
+}
+#div02{
+	text-align: center;
+}
+#div02 li{
+	list-style-type: none;
 }
 #footer {
 	height: 40px;
